@@ -77,7 +77,7 @@ def _linux(llvm_version):
         os_name = "linux-sles%s" % version
     elif distname == "ubuntu" and version.startswith("14.04"):
         os_name = "linux-gnu-ubuntu-14.04"
-    elif (distname == "ubuntu" and version.startswith("20.04")) or (distname == "linuxmint" and version.startswith("20")):
+    elif (distname == "ubuntu" and (version.startswith("20.04") or version.startswith("20.10"))) or (distname == "linuxmint" and version.startswith("20")):
         if major_llvm_version < 11:
             # There is no binary packages specifically for 20.04, but those for 18.04 works on
             # 20.04
